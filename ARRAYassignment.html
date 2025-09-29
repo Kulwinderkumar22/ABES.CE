@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>B.Tech Students</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    caption {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="commonTable">
+    <caption>Common Data</caption>
+    <thead>
+      <tr>
+        <th>Branch</th>
+        <th>Course</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <table id="uncommonTable">
+    <caption>Uncommon Data</caption>
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+<script>
+  // Array of students
+  const students = [
+    { roll: "101", name: "Rahul", branch: "CSE", course: "B.Tech" },
+    { roll: "102", name: "Priya", branch: "CSE", course: "B.Tech" },
+    { roll: "103", name: "Amit", branch: "CSE", course: "B.Tech" },
+    { roll: "104", name: "Sneha", branch: "CSE", course: "B.Tech" }
+  ];
+
+  // Common data table (Branch, Course)
+  const commonBody = document.querySelector("#commonTable tbody");
+  students.forEach(std => {
+    let row = <tr><td>${std.branch}</td><td>${std.course}</td></tr>;
+    commonBody.innerHTML += row;
+  });
+
+  // Uncommon data table (Roll, Name)
+  const uncommonBody = document.querySelector("#uncommonTable tbody");
+  students.forEach(std => {
+    let row = <tr><td>${std.roll}</td><td>${std.name}</td></tr>;
+    uncommonBody.innerHTML += row;
+  });
+</script>
+
+</body>
+</html> 
