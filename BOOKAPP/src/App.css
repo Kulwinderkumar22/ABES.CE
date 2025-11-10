@@ -1,0 +1,10 @@
+#adi{
+  text-align: center;
+  display: flex;
+  gap: 80px;
+}
+#ida{
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}

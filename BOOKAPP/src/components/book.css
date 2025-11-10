@@ -1,6 +1,8 @@
 #book{
-    border:5px solid red;
-    height:300px;
-    width:300px;
-    background-color: coral;
+    border: 5px solid red;
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+    background-color: grey;
+    
 }
